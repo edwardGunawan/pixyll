@@ -1,6 +1,6 @@
 .pagination {
-  font-size: 1rem;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: $base-font-size;
+  font-family: $font-family;
   font-weight: 300;
   text-align: center;
 }
@@ -9,9 +9,7 @@
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #fafafa;
   border-radius: 0.1875em;
-  border: 1px solid #f3f3f3;
   color: #333333;
   padding: 1em 1.5em;
 }
@@ -34,7 +32,7 @@
 }
 
 .pagination .button {
-  font-size: 1rem;
+  font-size: $base-font-size;;
   font-weight: 300;
   letter-spacing: 1px;
 }

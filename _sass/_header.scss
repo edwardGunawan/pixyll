@@ -10,6 +10,15 @@
   background-image: none;
 }
 
+.tag-title {
+  letter-spacing: 1px;
+  color: $header-color;
+  font-weight: $header-font-weight;
+  text-transform: uppercase;
+
+
+}
+
 .site-header .site-title {
   font-size: $h2;
 }

@@ -6,6 +6,7 @@ desc 'create a new post with "rake post[\'post title\']"'
 task :post, :title do |t, args|
   if args.title
     title = args.title
+    puts "Here it goes"
   else
     puts "Please try again. Remember to include the filename."
   end
@@ -26,6 +27,12 @@ task :post, :title do |t, args|
 
 # Uncomment the line below if you want the post to automatically open in your default text editor
 #  system ("#{ENV['EDITOR']} #{filename}")
+end
+
+# usage rake drafts
+desc 'List all draft posts'
+task :drafts do
+  puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`
 end
 
 # usage: rake draft['my new draft']
@@ -55,11 +62,13 @@ task :draft, :title do |t, args|
 # system ("#{ENV['EDITOR']} #{filename}")
 end
 
+
+
 desc 'preview the site with drafts'
 task :preview do
   puts "## Generating site"
   puts "## Stop with ^C ( <CTRL>+C )"
-  system "jekyll serve --watch --drafts"
+  system "bundle exec jekyll serve --watch --drafts"
 end
 
 # usage: rake undraft['my-file.md']

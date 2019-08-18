@@ -5,8 +5,16 @@
 
 .posts .post {
   margin-bottom: 0.75em;
-  border-bottom: thin solid #f3f3f3;
 }
+
+.post-summary {
+  font-size: $h5;
+}
+
+.post-header {
+  text-align: center;
+}
+
 
 .posts .post:last-child {
   border-bottom: none;
@@ -37,6 +45,7 @@
 .post-meta {
   width: auto;
   font-weight: 300;
+  font-size:$base-font-size;
   margin: 0;
   padding: .25em 0;
   color: #7a7a7a;
